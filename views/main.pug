@@ -26,15 +26,16 @@ block content
             .twit-author= twit.user.nick
             -const follow = user && user.Followings.map(f => f.id).includes(twit.user.id);
             if user && user.id !== twit.user.id && !follow
-                button.twit-follow Follow 
+              button.twit-follow Follow 
             .twit-content= twit.content 
             if twit.img 
-                .twit-img 
-                    img(src=twit.img alt='thumbnail')
+              .twit-img 
+                img(src=twit.img alt='thumbnail')
 
-block script
+
   script.
-    if (document.getElementById('img')) {
+    
+    if (document.getElementById('img')){
       document.getElementById('img').addEventListener('change', function(e) {
         const formData = new FormData();
         console.log(this, this.files);
