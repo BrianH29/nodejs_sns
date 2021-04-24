@@ -9,8 +9,6 @@ const Hashtag = require("./hashtag");
 
 const db = {};
 
-let sequelize;
-
 const sequelize = new Sequelize(
   config.database,
   config.username,
