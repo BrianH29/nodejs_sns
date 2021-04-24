@@ -37,7 +37,9 @@ app.use(
 );
 
 app.use(flash());
+//req 요청에 passport 설정을 심는다.
 app.use(passport.initialize());
+//req.session 객체에 passport 정보를 저장한다.
 app.use(passport.session());
 
 app.use("/", pageRouter);
