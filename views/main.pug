@@ -11,13 +11,13 @@ block content
             img#img-preview(src='' style='display: none;' width='250' alt='미리보기')
             input#img-url(type='hidden' name='url')
           div
-            label#img-label(for='img') 사진 업로드
+            label#img-label(for='img') Image Upload
             input#img(type='file' accept='image/*')
-            button#twit-btn.btn(type='submit') 짹짹
+            button#twit-btn.btn(type='submit') Upload
     .twits
       form#hashtag-form(action='/post/hashtag')
         input(type='text' name='hashtag' placeholder='태그 검색')
-        button.btn 검색
+        button.btn Search
       for twit in twits
         .twit
           input.twit-user-id(type='hidden' value=twit.user.id)
@@ -25,7 +25,7 @@ block content
           .twit-author= twit.user.nick
           -const follow = user && user.Followings.map(f => f.id).includes(twit.user.id);
           if user && user.id !== twit.user.id && !follow
-            button.twit-follow 팔로우하기
+            button.twit-follow Follow
           .twit-content= twit.content
           if twit.img
             .twit-img
