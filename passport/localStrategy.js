@@ -23,6 +23,7 @@ module.exports = () => {
         }
     } catch(err){
         console.error(err);
+        //서버 에러 시
         done(err); 
     }
     }));
