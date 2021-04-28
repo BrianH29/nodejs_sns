@@ -2,7 +2,7 @@
 simple sns service 
 
 ## Studying with nodejs-book 
-[Github](https://github.com/ZeroCho/nodejs-book)
+ref : [Github](https://github.com/ZeroCho/nodejs-book)
 
 - [ ] code with the book
 - [ ] goal is to understand the logic
