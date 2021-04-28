@@ -13,26 +13,26 @@ html
           if user && user.id
             .user-name= '안녕하세요! ' + user.nick + '님'
             .half
-              div 팔로잉
+              div Following
               .count.following-count= user.Followings && user.Followings.length || 0
             .half
-              div 팔로워
+              div Follower
               .count.follower-count= user.Followers && user.Followers.length || 0
             input#my-id(type='hidden' value=user.id)
-            a#my-profile.btn(href='/profile') 내 프로필
-            a#logout.btn(href='/auth/logout') 로그아웃
+            a#my-profile.btn(href='/profile') My Profile
+            a#logout.btn(href='/auth/logout') Logout
           else
             form#login-form(action='/auth/login' method='post')
               .input-group
-                label(for='email') 이메일
+                label(for='email') Email
                 input#email(type='email' name='email' required autofocus)
               .input-group
-                label(for='password') 비밀번호
+                label(for='password') Password
                 input#password(type='password' name='password' required)
               if loginError
                 .error-message= loginError
-              a#join.btn(href='/join') 회원가입
-              button#login.btn(type='submit') 로그인
-              a#kakao.btn(href='/auth/kakao') 카카오톡
+              a#join.btn(href='/join') Register
+              button#login.btn(type='submit') Login
+              a#kakao.btn(href='/auth/kakao') KakaoTalk
        
       block content

@@ -16,7 +16,7 @@ block content
             button#twit-btn.btn(type='submit') Upload
     .twits
       form#hashtag-form(action='/post/hashtag')
-        input(type='text' name='hashtag' placeholder='태그 검색')
+        input(type='text' name='hashtag' placeholder='search tag')
         button.btn Search
       for twit in twits
         .twit

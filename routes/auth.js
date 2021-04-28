@@ -7,9 +7,10 @@ const User = require('../models/user');
 const router = express.Router(); 
 
 router.post('/join', isNotLoggedIn, async(req,res,next) => {
+    console.log("요기까지 들어 오는지가 의문이군")
     const {email, nick, password} = req.body;
     try{
-        const exUser = await User.findOne({where : email});
+        const exUser = await User.findOne({where : { email }});
         if(exUser) {
             return res.redirect('/join?error=exist');  
         } 
